@@ -329,3 +329,24 @@ function shuffleArray(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
 }
+
+    function restartQuiz() {
+        // Hide the result screen and reset the input field
+        document.getElementById("resultScreen").classList.add("hidden");
+        document.getElementById("name").value = '';
+
+        // Show the starting screen again
+        document.getElementById("screen3").classList.remove("hidden");
+
+        // Clear any existing timer intervals
+        clearInterval(timerInterval);
+
+        // Reset time to initial value (10 minutes in seconds)
+        timeRemaining = 600;
+        document.getElementById("timerDisplay").innerText = `Start Timer: 10:00`; // Reset timer display
+
+        // For example: resetting question index, score, etc.
+        currentQuestionIndex = 0;
+        score = 0;
+        selectedAnswers = [];
+    }
