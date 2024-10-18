@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
     <link rel="stylesheet" href="style/style.css" type="text/css">
 </head>
-<body> 
-     <!-- Logo -->
+
+<body>
+    <!-- Logo -->
     <div class="logo-container">
         <a href=""><img src="images/logo.png" alt="Logo" class="logo" height="120"></a>
     </div>
@@ -23,11 +25,11 @@
                 <br><br>
                 Use the buttons below to navigate through the quiz sections.
                 <br><br>
-                <button class="whiteBtn" onclick="showScreen(2)">How to play</button>   <br>
+                <button class="whiteBtn" onclick="showScreen(2)">How to play</button> <br>
                 <button class="whiteBtn" onclick="showScreen(3)">Play</button>
                 <br><br>
             </div>
-                
+
             <div id="screen1" class="screen" style="text-align:center;">
                 <!-- Main -->
                 <h3>Welcome to The World Economic Forum Quiz</h3>
@@ -36,17 +38,22 @@
                 <br><br>
                 Use the buttons below to navigate through the quiz sections.
                 <br><br>
-                <button class="whiteBtn" onclick="showScreen(2)">How to play</button>   <br>
+                <button class="whiteBtn" onclick="showScreen(2)">How to play</button> <br>
                 <button class="whiteBtn" onclick="showScreen(3)">Play</button>
                 <br><br>
             </div>
 
             <div id="screen3" class="screen hidden" style="text-align:center;">
                 <!-- Quiz Starter -->
+                <h3>Welcome to The World Economic Forum Quiz</h3>
+                <h4>User Name :</h4>
+                <input type="text" name="name" id="name" placeholder="Enter your name" />
+                <br><br>
                 <button class="whiteBtn btnDark" onclick="startQuiz()">Submit</button>
             </div>
 
         </div>
     </div>
 </body>
+
 </html>
