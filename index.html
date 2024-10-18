@@ -16,7 +16,7 @@
     <div id="content-wrapper">
         <!-- Content -->
         <div id="content">
-            <!-- Screens -->>
+            <!-- Screens -->
             <div id="screen1" class="screen" style="text-align:center;">
                 <!-- Main -->
                 <h3>Welcome to The World Economic Forum Quiz</h3>
@@ -30,17 +30,23 @@
                 <br><br>
             </div>
 
-            <div id="screen1" class="screen" style="text-align:center;">
-                <!-- Main -->
-                <h3>Welcome to The World Economic Forum Quiz</h3>
-                <h4>The Quiz Game to Explore the World Economic Forum's Impact and Initiatives</h4>
-                Join the challenge from anywhere and test your knowledge on how the WEF is shaping the future.
+            <div id="screen2" class="screen hidden">
+                <!-- How to Play -->
+                <h3 style="text-align:center;">How to play</h3>
+                <ul>
+                    <li><b>Read the Question: Each round, you'll be presented with a challenging question! It would be multiple choice.</b><br><br></li>
+                    <li><b>Choose Your Answer: Select the answer you think is right. Make sure to think fast - all quizzes are timed!</b><br><br></li>
+                    <li><b>Submit and Score: Click on the "Next" button to lock in your answer. You'll get immediate feedback!</b><br><br></li>
+                    <li><b>Track Your Progress: Keep an eye on your score as you move through the quiz.</b><br><br></li>
+                    <li><b>Complete the Quiz: At the end, you'll get your final score and the chance to review your answers!</b><br><br></li>
+                </ul>
+                <br>
+                <strong>This version emphasizes the WEF's goals while maintaining the interactive nature of the quiz game.</strong>
                 <br><br>
-                Use the buttons below to navigate through the quiz sections.
-                <br><br>
-                <button class="whiteBtn" onclick="showScreen(2)">How to play</button> <br>
-                <button class="whiteBtn" onclick="showScreen(3)">Play</button>
-                <br><br>
+                <div style="text-align:center;">
+                    <button class="whiteBtn" onclick="showScreen(3)">Play</button>
+                    <button class="whiteBtn" onclick="showScreen(1)">Go Back</button>
+                </div>
             </div>
 
             <div id="screen3" class="screen hidden" style="text-align:center;">
@@ -66,10 +72,32 @@
                 <br><br>
                 <div id="questionCounter" style="text-align:center; font-size: 16px; margin-bottom: 10px;"></div>
 
+                <!-- Help section with explanation and button -->
+                <div id="helpSection">
+                    <p>
+                        Need help? You can use the button below to remove half of the options.<br>
+                        <strong>Note:</strong> You can use this help only once during the game.
+                    </p>
+                    <button class="helpBtn" id="helpButton" onclick="eliminateOptions()">50% Help: Remove 2 Options</button>
+                </div>
+
             </div>
 
+
+
+            <div id="resultScreen" class="screen hidden" style="text-align:center;">
+                <!-- Result -->
+                <h2>You did it! </h2>
+                <p id="resultMessage" style="font-size:18px;"></p>        <br><br>
+                <button class="whiteBtn" onclick="reviewAnswers()">Review Answers</button> <br>
+                <button class="whiteBtn btnDark" onclick="restartQuiz()">Restart Quiz</button> <br>
+                <button class="whiteBtn btnDark" onclick="showScreen(1)">Home</button> <br>
+            </div>
         </div>
     </div>
-</body>
 
+    <!-- Include script.js file -->
+    <script src="js/script.js"></script>
+
+</body>
 </html>
