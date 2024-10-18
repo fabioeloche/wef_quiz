@@ -350,3 +350,19 @@ function shuffleArray(array) {
         score = 0;
         selectedAnswers = [];
     }
+
+    
+    function startTimer() {
+        timerInterval = setInterval(function () {
+            timeRemaining--;
+            const minutes = Math.floor(timeRemaining / 60);
+            const seconds = timeRemaining % 60;
+            document.getElementById("timerDisplay").innerText = `Start Timer: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+
+            // If time runs out, show results
+            if (timeRemaining <= 0) {
+                clearInterval(timerInterval);
+                showResults();
+            }
+        }, 1000); // Run every second
+        }
