@@ -178,4 +178,36 @@ helpButton.innerText = "50% Help: Remove 2 Options"; // Reset the button text
         optionsContainer.appendChild(optionElement);
         });
     }
+
+function selectOption(selectedOption) {
+        const options = document.querySelectorAll('.optionQ');
+        options.forEach(option => {
+    option.classList.remove('active'); // Deselect all options
+        });
+
+        const selectedElement = [...options].find(option => option.innerText === selectedOption);
+selectedElement.classList.add('active'); // Highlight selected option
+
+selectedAnswers[currentQuestionIndex] = selectedOption; // Store selected answer
+    }
+
+function nextQuestion() {
+        const currentQuestion = quizQuestions2024[currentQuestionIndex];
+if (!selectedAnswers[currentQuestionIndex]) {
+    alert('Please select an answer before proceeding.');
+return;
+        }
+
+if (selectedAnswers[currentQuestionIndex] === currentQuestion.correctAnswer) {
+    score++;
+        }
+
+currentQuestionIndex++;
+if (currentQuestionIndex < quizQuestions2024.length) {
+    showQuestion();
+        } else {
+    clearInterval(timerInterval);
+showResults();
+        }
+    }
     
