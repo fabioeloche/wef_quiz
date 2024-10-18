@@ -219,4 +219,106 @@ showResults();
     const resultMessage = `${userName}, you scored ${score} out of ${quizQuestions2024.length}!`;
     document.getElementById("resultMessage").innerText = resultMessage;
         }
+
+       
+function reviewAnswers() {
+    document.getElementById("timerDisplay").classList.add("hidden");
+
+const optionsContainer = document.getElementById("optionsContainer");
+optionsContainer.innerHTML = '';
+
+const question = quizQuestions2024[reviewIndex];
+const questionElement = document.createElement("div");
+questionElement.innerHTML = `<strong>${reviewIndex + 1}. ${question.question}</strong>`;
+optionsContainer.appendChild(questionElement);
+
+        question.options.forEach(option => {
+            const optionElement = document.createElement("button");
+optionElement.className = "optionQ";
+
+// Highlight based on the user's selected answer
+if (selectedAnswers[reviewIndex] === option) {
+    optionElement.classList.add('selected'); // User's selected answer
+            }
+
+// Highlight the correct answer
+if (option === question.correctAnswer) {
+    optionElement.classList.add('correct'); // Correct answer
+            }
+// Highlight the incorrect user-selected answer
+if (selectedAnswers[reviewIndex] !== question.correctAnswer && selectedAnswers[reviewIndex] === option) {
+    optionElement.classList.add('wrong'); // Incorrect answer
+            }
+
+// Hide the entire help section (button and explanation) during the review
+const helpSection = document.getElementById("helpSection");
+if (helpSection) {
+    helpSection.style.display = "none"; // Hide the help section
+            }
+
+optionElement.innerText = option;
+optionsContainer.appendChild(optionElement);
+        });
+
+// Show question count
+const questionCounter = document.createElement("div");
+questionCounter.style.textAlign = "center";
+questionCounter.innerText = `${reviewIndex + 1}/${quizQuestions2024.length}`;
+optionsContainer.appendChild(questionCounter);
+
+// Show navigation buttons
+const navContainer = document.createElement("div");
+navContainer.style.display = "flex"; // Use flexbox for layout
+navContainer.style.justifyContent = "space-between"; // Space between buttons
+navContainer.style.marginTop = "20px"; // Add some margin for spacing
+
+// Previous Button
+const prevButton = document.createElement("button");
+prevButton.className = "whiteBtn";
+prevButton.innerText = "Previous";
+        prevButton.onclick = () => {
+            if (reviewIndex > 0) {
+    reviewIndex--;
+reviewAnswers();
+            }
+        };
+prevButton.disabled = reviewIndex === 0; // Disable if at the first question
+navContainer.appendChild(prevButton);
+
+// Next Button
+const nextButton = document.createElement("button");
+nextButton.className = "whiteBtn";
+nextButton.innerText = "Next";
+        nextButton.onclick = () => {
+            if (reviewIndex < quizQuestions2024.length - 1) {
+    reviewIndex++;
+reviewAnswers();
+            }
+        };
+nextButton.disabled = reviewIndex === quizQuestions2024.length - 1; // Disable if at the last question
+navContainer.appendChild(nextButton);
+
+optionsContainer.appendChild(navContainer); // Append the navigation buttons
+
+// Add Result button below the navigation
+const resultButtonContainer = document.createElement("div");
+resultButtonContainer.style.textAlign = "center"; // Center the button
+const resultButton = document.createElement("button");
+resultButton.className = "whiteBtn btnDark";
+resultButton.innerText = "Result";
+        resultButton.onclick = () => {
+    document.getElementById("resultScreen").classList.remove("hidden");
+document.getElementById("screen4").classList.add("hidden");
+        };
+resultButtonContainer.appendChild(resultButton);
+optionsContainer.appendChild(resultButtonContainer); // Append the Results button below
+
+
+document.getElementById("questionText").innerHTML = "";
+document.getElementById("questionCounter").innerHTML = "";
+document.getElementById("nextQuestionBtn").classList.add("hidden");
+
+document.getElementById("resultScreen").classList.add("hidden");
+document.getElementById("screen4").classList.remove("hidden");
+    }
     
