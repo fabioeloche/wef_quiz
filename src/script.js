@@ -210,4 +210,13 @@ if (currentQuestionIndex < quizQuestions2024.length) {
 showResults();
         }
     }
+
+    function showResults() {
+        //clearInterval(timerInterval);
+        document.getElementById("screen4").classList.add("hidden");
+    document.getElementById("resultScreen").classList.remove("hidden");
+
+    const resultMessage = `${userName}, you scored ${score} out of ${quizQuestions2024.length}!`;
+    document.getElementById("resultMessage").innerText = resultMessage;
+        }
     
