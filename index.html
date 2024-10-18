@@ -52,6 +52,22 @@
                 <button class="whiteBtn btnDark" onclick="startQuiz()">Submit</button>
             </div>
 
+            <div id="screen4" class="screen hidden" style="text-align:center;">
+                <!-- Timer Display -->
+                <div id="timerDisplay" style="font-size: 18px; color: red; font-weight: bold;">Time Left: 10:00</div>
+
+                <h3 id="questionText"></h3>
+                <div id="optionsContainer"></div>
+                <br>
+
+                <!-- Next Question Button -->
+                <button class="whiteBtn btnDark" id="nextQuestionBtn" onclick="nextQuestion()">Next Question</button>
+
+                <br><br>
+                <div id="questionCounter" style="text-align:center; font-size: 16px; margin-bottom: 10px;"></div>
+
+            </div>
+
         </div>
     </div>
 </body>
