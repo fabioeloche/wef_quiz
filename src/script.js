@@ -104,6 +104,9 @@ let currentQuestionIndex = 0;
 let userName = '';
 let score = 0;
 let selectedAnswers = [];
+let quizDuration = 1 * 60; // 10 minutes in seconds
+let timerInterval;
+let timeRemaining = 600; // 10 minutes in seconds
 
     function showScreen(screenNumber) {
         const screens = document.querySelectorAll('.screen');
@@ -111,3 +114,68 @@ let selectedAnswers = [];
     document.getElementById('screen' + screenNumber).classList.remove('hidden');
     document.getElementById("name").focus();
     }
+
+      // Initialize to show the first screen
+  showScreen(1);
+
+  
+
+  function startQuiz() {
+
+    userName = document.getElementById("name").value;
+if (userName.trim() === '') {
+    alert('Please enter your name to start the quiz.');
+return;
+        }
+shuffleArray(quizQuestions2024); // Shuffle questions
+document.getElementById("screen3").classList.add("hidden");
+document.getElementById("screen4").classList.remove("hidden");
+document.getElementById("nextQuestionBtn").classList.remove("hidden");
+currentQuestionIndex = 0;
+score = 0;
+selectedAnswers = [];
+
+showQuestion();
+
+timeRemaining = 600;
+document.getElementById("timerDisplay").classList.remove("hidden");
+// Start countdown timer
+startTimer();
+
+// Re-enable and show the help section
+const helpSection = document.getElementById("helpSection");
+if (helpSection) {
+    helpSection.style.display = "block"; // Show the help section again
+        }
+
+// Reset the help button when the quiz starts
+const helpButton = document.getElementById("helpButton");
+helpButton.disabled = false; // Re-enable the button
+helpButton.style.opacity = 1; // Restore opacity
+helpButton.innerText = "50% Help: Remove 2 Options"; // Reset the button text
+    }
+
+    function showQuestion() {
+        const questionData = quizQuestions2024[currentQuestionIndex];
+    
+        // Shuffle the options before displaying them
+        shuffleArray(questionData.options);
+    
+        document.getElementById("questionText").innerText = questionData.question;
+    
+        const questionCounter = document.getElementById("questionCounter");
+        questionCounter.innerText = `${currentQuestionIndex + 1}/${quizQuestions2024.length}`;
+    
+        const optionsContainer = document.getElementById("optionsContainer");
+        optionsContainer.innerHTML = ''; // Clear previous options
+    
+        // Display the shuffled options
+        questionData.options.forEach((option) => {
+            const optionElement = document.createElement("button");
+        optionElement.className = "optionQ";
+        optionElement.innerText = option;
+            optionElement.onclick = () => selectOption(option);
+        optionsContainer.appendChild(optionElement);
+        });
+    }
+    
