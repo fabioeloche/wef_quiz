@@ -53,3 +53,22 @@ body, html {
 .whiteBtn:hover {
     opacity: 0.8;
 }
+
+.btnDark {
+    background-color: #062491;
+    color: #fff;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #4CAF50;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    .btn:hover {
+        background-color: #45a049;
+    }
