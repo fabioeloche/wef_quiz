@@ -72,3 +72,39 @@ body, html {
     .btn:hover {
         background-color: #45a049;
     }
+    
+.optionQ {
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 40px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+}
+
+.optionQ.active {
+    background-color: #bed6f3;
+    /* Correct answer */
+}
+
+.optionQ.wrong {
+    background-color: #ffd4d4;
+    /* Incorrect answer */
+}
+
+.optionQ.correct {
+    background-color: #28a745 !important;
+    /* Green for correct */
+    color: white;
+    /* Optional: Change text color to white for better contrast */
+}
+
+.optionQ.selected {
+    background-color: #ffd4d4;
+    /* Red for selected wrong answer */
+}
