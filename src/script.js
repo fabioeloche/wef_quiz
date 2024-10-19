@@ -366,3 +366,37 @@ function shuffleArray(array) {
             }
         }, 1000); // Run every second
         }
+
+        function eliminateOptions() {
+            const questionData = quizQuestions2024[currentQuestionIndex]; // Get the current question
+            const correctAnswer = questionData.correctAnswer; // Get the correct answer
+            const allOptions = questionData.options; // Get all options
+        
+            // Filter the wrong answers
+            const wrongAnswers = allOptions.filter(option => option !== correctAnswer);
+        
+            // Randomly select one wrong answer to keep
+            const selectedWrongAnswer = wrongAnswers[Math.floor(Math.random() * wrongAnswers.length)];
+        
+            // Create a new array with one correct answer and one wrong answer
+            const remainingOptions = [correctAnswer, selectedWrongAnswer];
+        
+            // Clear the current options displayed
+            const optionsContainer = document.getElementById("optionsContainer");
+            optionsContainer.innerHTML = ''; // Clear previous options
+        
+            // Display only the remaining options (one correct, one wrong)
+            remainingOptions.forEach(option => {
+                const optionElement = document.createElement("button");
+            optionElement.className = "optionQ";
+            optionElement.innerText = option;
+                optionElement.onclick = () => selectOption(option);
+            optionsContainer.appendChild(optionElement);
+            });
+        
+            // Disable the "Eliminate 50%" button after it's used once
+            const helpButton = document.querySelector(".helpBtn");
+            helpButton.disabled = true; // Disable the button
+            helpButton.style.opacity = 0.6; // Optionally, reduce opacity to visually indicate it's disabled
+            helpButton.innerText = "50% Help Used"; // Change text to show it's used
+        }
