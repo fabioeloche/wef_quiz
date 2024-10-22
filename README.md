@@ -34,8 +34,24 @@ The live version of the app can be found at: [Live Site URL](https://fabioeloche
 
 ## Design
 
-
 ### Color Scheme
 The website uses a clean white background with black text for readability. Dark blue buttons are used for primary actions, while gold highlights the help button. Correct answers are marked with green, and incorrect ones with red, providing clear feedback throughout the quiz.
 ![Features Image](/assets/images/colorscheme.jpeg)
 
+### Typography
+The app uses **Arial** for its simplicity and readability. The quiz questions are presented in a legible format with an emphasis on clarity.
+
+
+### Layout
+The layout is centered and fully responsive, ensuring that the app works well on all device sizes, from desktops to mobile phones.
+
+
+## Features
+
+
+- **Multiple Quiz Screens**: Users are guided through different stages of the quiz, from instructions to final results.
+- **Timer**: The quiz includes a countdown timer, adding a challenging aspect to answering the questions quickly and accurately.
+- **Help Button**: Users can use a 50% help button to eliminate two wrong options per quiz round, making it easier to answer tough questions.
+- **Immediate Feedback**: Upon submitting an answer, users are given feedback on whether their answer was correct or incorrect.
+- **Progress Tracking**: Users can track their progress through the quiz with a counter showing the number of questions answered and remaining.
+- **Results and Review**: At the end of the quiz, users are presented with their final score and can review their answers to see where they went right or wrong.
