@@ -21,3 +21,21 @@ The **World Economic Forum Quiz Web App** is an interactive platform designed to
    - [Local Setup](#local-setup)
 7. [Future Enhancements](#future-enhancements)
 8. [Credits](#credits)
+
+
+## Project Overview
+
+
+The **World Economic Forum Quiz Web App** allows users to engage with questions related to the WEF’s latest initiatives and global impact. Users can test their knowledge by answering a series of timed multiple-choice questions. At the end of the quiz, participants are given their results and have the option to review their answers.
+
+
+The live version of the app can be found at: [Live Site URL](https://fabioeloche.github.io/wef_quiz/).
+
+
+## Design
+
+
+### Color Scheme
+The website uses a clean white background with black text for readability. Dark blue buttons are used for primary actions, while gold highlights the help button. Correct answers are marked with green, and incorrect ones with red, providing clear feedback throughout the quiz.
+![Features Image](/assets/images/colorscheme.jpeg)
+
