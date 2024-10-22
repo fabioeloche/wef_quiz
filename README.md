@@ -82,3 +82,18 @@ The layout is centered and fully responsive, ensuring that the app works well on
 - **CSS3**: For styling the interface and ensuring responsiveness.
 - **JavaScript (ES6)**: For implementing the quiz logic, including question shuffling, answer validation, timers, and score tracking.
 - **GitHub Pages**: For hosting the live version of the website.
+
+
+
+## Deployment
+
+
+The website is deployed using GitHub Pages. Follow these steps to deploy the project:
+
+
+1. Log in (or sign up) to GitHub.
+2. Go to the repository: [fabioeloche/wef_quiz](https://github.com/fabioeloche/wef_quiz).
+3. Navigate to the repository’s **Settings** tab.
+4. Under the **Code and Automation** section, select the **Pages** option.
+5. From the source dropdown, select the **main branch** and save the settings.
+6. The site will be deployed within a few minutes. The live version will be accessible at the provided URL once the deployment is complete.
