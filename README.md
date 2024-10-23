@@ -64,10 +64,30 @@ The layout is centered and fully responsive, ensuring that the app works well on
 
 
 ### Screens
-1. **Welcome Screen**: Introduction to the quiz with buttons to start or read instructions.
-2. **Instructions Screen**: Details on how to play the quiz.
-3. **Quiz Screen**: Users answer multiple-choice questions with a timer and help options.
-4. **Results Screen**: Final score and the option to review answers or restart the quiz.
+
+1. **Welcome Screen**: Introduction to the quiz with buttons to start or read instructions.  
+
+   ![Welcome Screen](assets/images/pages/welcome.png)
+
+
+2. **Instructions Screen**: Details on how to play the quiz.  
+
+   ![Instructions Screen](assets/images/pages/help.png)
+
+
+3. **Quiz Screen**: Users answer multiple-choice questions with a timer and help options. 
+
+   ![Quiz Screen](assets/images/pages/quiz.png)
+
+
+4. **Results Screen**: Displays the final score with the option to review answers or restart the quiz.  
+
+   ![Results Screen](assets/images/pages/results.png)
+
+
+5. **Help Page**: Allows users to reduce the number of options by 50% (removes two incorrect answers).
+
+   ![Help Page](assets/images/pages/help.png)
 
 
 ### Navigation
