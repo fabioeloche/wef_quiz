@@ -72,7 +72,7 @@ The layout is centered and fully responsive, ensuring that the app works well on
 
 2. **Instructions Screen**: Details on how to play the quiz.  
 
-   ![Instructions Screen](assets/images/pages/help.png)
+   ![Instructions Screen](assets/images/pages/howtoplay.png)
 
 
 3. **Quiz Screen**: Users answer multiple-choice questions with a timer and help options. 
