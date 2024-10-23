@@ -143,5 +143,6 @@ The website is deployed using GitHub Pages. Follow these steps to deploy the pro
 
 ## Credits
 
+- **Inspiration**: The design and structure of this project were partially inspired by [The Quiz Arms](https://github.com/kera-cudmore/TheQuizArms) by Kera Cudmore. It provided valuable insights into quiz functionality and user experience.
 - **Background Image**: The background image of fluttering flags against a clear sky was sourced from Adobe Stock. You can view it here: [Flags of Many Countries](https://stock.adobe.com/images/flags-of-many-countries-flutter-on-the-background-of-the-blue-sky-in-sunny-day/166713949).
 - **Color Scheme**: The color palette for the project was generated using the Coolors tool, providing a cohesive and visually appealing design. Check it out here: [Coolors](https://coolors.co/).
