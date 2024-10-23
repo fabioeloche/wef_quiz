@@ -17,6 +17,8 @@ The **World Economic Forum Quiz Web App** is an interactive platform designed to
    - [Screens](#screens)
    - [Navigation](#navigation)
 5. [Technologies Used](#technologies-used)
+6. [Testing](#testing)
+   - [Validator Testing](#validator-testing)
 6. [Deployment](#deployment)
    - [Local Setup](#local-setup)
 7. [Future Enhancements](#future-enhancements)
@@ -84,6 +86,22 @@ The layout is centered and fully responsive, ensuring that the app works well on
 - **GitHub Pages**: For hosting the live version of the website.
 
 
+## Testing
+
+- Tested navigation bar elements and buttons across all pages.
+- Ensured the input form for the user’s name enforces validation and email syntax rules where applicable.
+- Verified that the quiz proceeds only when the required fields are filled.
+- Tested the **Help** button functionality and score display at the end of the quiz.
+- Verified site compatibility in MS Edge, Chrome, and Safari.
+- Verified the responsiveness of all pages across different screen sizes.
+
+### Validator Testing
+
+- **HTML**: Checked with [W3C validator](https://validator.w3.org/) for `index.html`.
+![HTML Testing](assets/images/htmlresults.png)
+- **CSS**: Validated with [Jigsaw validator](https://jigsaw.w3.org/css-validator/) for `style.css`.
+![CSS Testing](assets/images/cssresults.jpeg)
+- **Lighthouse Testing**: Used Google Chrome's Lighthouse to verify performance and accessibility. ![Lighthouse Testing](assets/images/lighthouseresult.png)
 
 ## Deployment
 
