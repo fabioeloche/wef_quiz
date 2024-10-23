@@ -97,11 +97,16 @@ The layout is centered and fully responsive, ensuring that the app works well on
 
 ### Validator Testing
 
-- **HTML**: Checked with [W3C validator](https://validator.w3.org/) for `index.html`.
+- **HTML**: Checked with [W3C validator]
+   - Result for index.html
+(https://validator.w3.org/) for `index.html`.
 ![HTML Testing](assets/images/htmlresults.png)
 - **CSS**: Validated with [Jigsaw validator](https://jigsaw.w3.org/css-validator/) for `style.css`.
+   - Result for style.css
 ![CSS Testing](assets/images/cssresults.jpeg)
-- **Lighthouse Testing**: Used Google Chrome's Lighthouse to verify performance and accessibility. ![Lighthouse Testing](assets/images/lighthouseresult.png)
+- **Lighthouse Testing**: Used Google Chrome's Lighthouse to verify performance and accessibility.
+   - Result for index.html
+![Lighthouse Testing](assets/images/lighthouseresult.png)
 
 ## Deployment
 
