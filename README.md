@@ -140,3 +140,8 @@ The website is deployed using GitHub Pages. Follow these steps to deploy the pro
 4. Under the **Code and Automation** section, select the **Pages** option.
 5. From the source dropdown, select the **main branch** and save the settings.
 6. The site will be deployed within a few minutes. The live version will be accessible at the provided URL once the deployment is complete.
+
+## Credits
+
+- **Background Image**: The background image of fluttering flags against a clear sky was sourced from Adobe Stock. You can view it here: [Flags of Many Countries](https://stock.adobe.com/images/flags-of-many-countries-flutter-on-the-background-of-the-blue-sky-in-sunny-day/166713949).
+- **Color Scheme**: The color palette for the project was generated using the Coolors tool, providing a cohesive and visually appealing design. Check it out here: [Coolors](https://coolors.co/).
