@@ -1,104 +1,44 @@
 const quizQuestions2024 = [{
-        question: "What is a key theme of the World Economic Forum's 2024 meeting?",
-        options: [
-            "Rebuilding trust",
-            "Expanding cryptocurrency",
-            "Increasing global trade restrictions",
-            "Reducing reliance on renewable energy"
-        ],
-        correctAnswer: "Rebuilding trust"
-    },
-    {
-        question: "Which two global risks were identified as the most severe in the WEF Global Risks Report 2024?",
-        options: [
-            "Cyberattacks and AI",
-            "Climate change and misinformation",
-            "Inflation and housing crisis",
-            "Trade war and military conflicts"
-        ],
-        correctAnswer: "Climate change and misinformation"
-    },
-    {
-        question: "What major technological challenge is the WEF addressing in 2024 with the AI Governance Alliance?",
-        options: [
-            "Data storage",
-            "Sustainable AI development",
-            "Internet accessibility",
-            "Online privacy"
-        ],
-        correctAnswer: "Sustainable AI development"
-    },
-    {
-        question: "What economic opportunity was highlighted as a potential way to close the global gender gap, according to WEF's 2024 discussions?",
-        options: [
-            "The 'gender dividend'",
-            "The 'green economy'",
-            "The 'tech inclusion initiative'",
-            "The 'digital equity fund'"
-        ],
-        correctAnswer: "The 'gender dividend'"
-    },
-    {
-        question: "In 2024, how does the WEF propose to balance AI growth with sustainability efforts?",
-        options: [
-            "By limiting AI research",
-            "Through collaborative AI governance frameworks",
-            "By banning AI in certain industries",
-            "By outsourcing AI innovation to low-carbon regions"
-        ],
-        correctAnswer: "Through collaborative AI governance frameworks"
-    },
-    {
-        question: "What is one of the WEF's goals for the global workforce in 2024?",
-        options: [
-            "Reducing work-from-home opportunities",
-            "Promoting lifelong learning and upskilling",
-            "Limiting international collaboration",
-            "Decreasing automation in manufacturing"
-        ],
-        correctAnswer: "Promoting lifelong learning and upskilling"
-    },
-    {
-        question: "What economic growth model did the WEF advocate for during the 2024 meeting?",
-        options: [
-            "Free trade capitalism without regulations",
-            "A model balancing productivity with equity and sustainability",
-            "Focus on fossil fuel-driven growth",
-            "A return to industrial manufacturing"
-        ],
-        correctAnswer: "A model balancing productivity with equity and sustainability"
-    },
-    {
-        question: "Which major global initiative is WEF promoting to support climate action in 2024?",
-        options: [
-            "The First Movers Coalition",
-            "The Digital Taxation Policy",
-            "The Free Energy Alliance",
-            "The Consumer Tech Coalition"
-        ],
-        correctAnswer: "The First Movers Coalition"
-    },
-    {
-        question: "What does the WEF identify as a key challenge to economic recovery in 2024?",
-        options: [
-            "Rising consumer debt",
-            "Fragmented global cooperation",
-            "Labor shortages",
-            "Technology adoption"
-        ],
-        correctAnswer: "Fragmented global cooperation"
-    },
-    {
-        question: "How does WEF propose to ensure equitable access to technology in 2024?",
-        options: [
-            "Expanding global technology patents",
-            "Promoting digital inclusion initiatives",
-            "Limiting AI to developed countries",
-            "Outsourcing tech production to wealthier nations"
-        ],
-        correctAnswer: "Promoting digital inclusion initiatives"
-    }
-];
+    question: "What is a key theme of the World Economic Forum's 2024 meeting?",
+    options: ["Rebuilding trust", "Expanding cryptocurrency", "Increasing global trade restrictions", "Reducing reliance on renewable energy"],
+    correctAnswer: "Rebuilding trust"
+}, {
+    question: "Which two global risks were identified as the most severe in the WEF Global Risks Report 2024?",
+    options: ["Cyberattacks and AI", "Climate change and misinformation", "Inflation and housing crisis", "Trade war and military conflicts"],
+    correctAnswer: "Climate change and misinformation"
+}, {
+    question: "What major technological challenge is the WEF addressing in 2024 with the AI Governance Alliance?",
+    options: ["Data storage", "Sustainable AI development", "Internet accessibility", "Online privacy"],
+    correctAnswer: "Sustainable AI development"
+}, {
+    question: "What economic opportunity was highlighted as a potential way to close the global gender gap, according to WEF's 2024 discussions?",
+    options: ["The 'gender dividend'", "The 'green economy'", "The 'tech inclusion initiative'", "The 'digital equity fund'"],
+    correctAnswer: "The 'gender dividend'"
+}, {
+    question: "In 2024, how does the WEF propose to balance AI growth with sustainability efforts?",
+    options: ["By limiting AI research", "Through collaborative AI governance frameworks", "By banning AI in certain industries", "By outsourcing AI innovation to low-carbon regions"],
+    correctAnswer: "Through collaborative AI governance frameworks"
+}, {
+    question: "What is one of the WEF's goals for the global workforce in 2024?",
+    options: ["Reducing work-from-home opportunities", "Promoting lifelong learning and upskilling", "Limiting international collaboration", "Decreasing automation in manufacturing"],
+    correctAnswer: "Promoting lifelong learning and upskilling"
+}, {
+    question: "What economic growth model did the WEF advocate for during the 2024 meeting?",
+    options: ["Free trade capitalism without regulations", "A model balancing productivity with equity and sustainability", "Focus on fossil fuel-driven growth", "A return to industrial manufacturing"],
+    correctAnswer: "A model balancing productivity with equity and sustainability"
+}, {
+    question: "Which major global initiative is WEF promoting to support climate action in 2024?",
+    options: ["The First Movers Coalition", "The Digital Taxation Policy", "The Free Energy Alliance", "The Consumer Tech Coalition"],
+    correctAnswer: "The First Movers Coalition"
+}, {
+    question: "What does the WEF identify as a key challenge to economic recovery in 2024?",
+    options: ["Rising consumer debt", "Fragmented global cooperation", "Labor shortages", "Technology adoption"],
+    correctAnswer: "Fragmented global cooperation"
+}, {
+    question: "How does WEF propose to ensure equitable access to technology in 2024?",
+    options: ["Expanding global technology patents", "Promoting digital inclusion initiatives", "Limiting AI to developed countries", "Outsourcing tech production to wealthier nations"],
+    correctAnswer: "Promoting digital inclusion initiatives"
+}];
 
 let currentQuestionIndex = 0;
 let userName = '';
@@ -108,6 +48,10 @@ let quizDuration = 1 * 60; // 10 minutes in seconds
 let timerInterval;
 let timeRemaining = 600; // 10 minutes in seconds
 
+/**
+ * Displays the specified screen by hiding others.
+ * @param {number} screenNumber - The screen number to show.
+ */
 function showScreen(screenNumber) {
     const screens = document.querySelectorAll('.screen');
     screens.forEach(screen => screen.classList.add('hidden'));
@@ -118,10 +62,10 @@ function showScreen(screenNumber) {
 // Initialize to show the first screen
 showScreen(1);
 
-
-
+/**
+ * Starts the quiz by initializing variables, shuffling questions, and setting up the timer.
+ */
 function startQuiz() {
-
     userName = document.getElementById("name").value;
     if (userName.trim() === '') {
         alert('Please enter your name to start the quiz.');
@@ -139,26 +83,24 @@ function startQuiz() {
 
     timeRemaining = 600;
     document.getElementById("timerDisplay").classList.remove("hidden");
-    // Start countdown timer
     startTimer();
 
-    // Re-enable and show the help section
     const helpSection = document.getElementById("helpSection");
     if (helpSection) {
-        helpSection.style.display = "block"; // Show the help section again
+        helpSection.style.display = "block";
     }
 
-    // Reset the help button when the quiz starts
     const helpButton = document.getElementById("helpButton");
-    helpButton.disabled = false; // Re-enable the button
-    helpButton.style.opacity = 1; // Restore opacity
-    helpButton.innerText = "50% Help: Remove 2 Options"; // Reset the button text
+    helpButton.disabled = false;
+    helpButton.style.opacity = 1;
+    helpButton.innerText = "50% Help: Remove 2 Options";
 }
 
+/**
+ * Displays the current question and options on the screen.
+ */
 function showQuestion() {
     const questionData = quizQuestions2024[currentQuestionIndex];
-
-    // Shuffle the options before displaying them
     shuffleArray(questionData.options);
 
     document.getElementById("questionText").innerText = questionData.question;
@@ -167,10 +109,9 @@ function showQuestion() {
     questionCounter.innerText = `${currentQuestionIndex + 1}/${quizQuestions2024.length}`;
 
     const optionsContainer = document.getElementById("optionsContainer");
-    optionsContainer.innerHTML = ''; // Clear previous options
+    optionsContainer.innerHTML = '';
 
-    // Display the shuffled options
-    questionData.options.forEach((option) => {
+    questionData.options.forEach(option => {
         const optionElement = document.createElement("button");
         optionElement.className = "optionQ";
         optionElement.innerText = option;
@@ -179,18 +120,23 @@ function showQuestion() {
     });
 }
 
+/**
+ * Handles the selection of an answer option.
+ * @param {string} selectedOption - The option selected by the user.
+ */
 function selectOption(selectedOption) {
     const options = document.querySelectorAll('.optionQ');
-    options.forEach(option => {
-        option.classList.remove('active'); // Deselect all options
-    });
+    options.forEach(option => option.classList.remove('active'));
 
     const selectedElement = [...options].find(option => option.innerText === selectedOption);
-    selectedElement.classList.add('active'); // Highlight selected option
+    selectedElement.classList.add('active');
 
-    selectedAnswers[currentQuestionIndex] = selectedOption; // Store selected answer
+    selectedAnswers[currentQuestionIndex] = selectedOption;
 }
 
+/**
+ * Moves to the next question in the quiz or displays results if it's the last question.
+ */
 function nextQuestion() {
     const currentQuestion = quizQuestions2024[currentQuestionIndex];
     if (!selectedAnswers[currentQuestionIndex]) {
@@ -211,8 +157,10 @@ function nextQuestion() {
     }
 }
 
+/**
+ * Displays the quiz results on the screen.
+ */
 function showResults() {
-    //clearInterval(timerInterval);
     document.getElementById("screen4").classList.add("hidden");
     document.getElementById("resultScreen").classList.remove("hidden");
 
@@ -222,6 +170,9 @@ function showResults() {
 
 let reviewIndex = 0;
 
+/**
+ * Allows the user to review their answers, displaying correct and selected options.
+ */
 function reviewAnswers() {
     document.getElementById("timerDisplay").classList.add("hidden");
 
@@ -237,43 +188,35 @@ function reviewAnswers() {
         const optionElement = document.createElement("button");
         optionElement.className = "optionQ";
 
-        // Highlight based on the user's selected answer
         if (selectedAnswers[reviewIndex] === option) {
-            optionElement.classList.add('selected'); // User's selected answer
+            optionElement.classList.add('selected');
         }
-
-        // Highlight the correct answer
         if (option === question.correctAnswer) {
-            optionElement.classList.add('correct'); // Correct answer
+            optionElement.classList.add('correct');
         }
-        // Highlight the incorrect user-selected answer
         if (selectedAnswers[reviewIndex] !== question.correctAnswer && selectedAnswers[reviewIndex] === option) {
-            optionElement.classList.add('wrong'); // Incorrect answer
+            optionElement.classList.add('wrong');
         }
 
-        // Hide the entire help section (button and explanation) during the review
         const helpSection = document.getElementById("helpSection");
         if (helpSection) {
-            helpSection.style.display = "none"; // Hide the help section
+            helpSection.style.display = "none";
         }
 
         optionElement.innerText = option;
         optionsContainer.appendChild(optionElement);
     });
 
-    // Show question count
     const questionCounter = document.createElement("div");
     questionCounter.style.textAlign = "center";
     questionCounter.innerText = `${reviewIndex + 1}/${quizQuestions2024.length}`;
     optionsContainer.appendChild(questionCounter);
 
-    // Show navigation buttons
     const navContainer = document.createElement("div");
-    navContainer.style.display = "flex"; // Use flexbox for layout
-    navContainer.style.justifyContent = "space-between"; // Space between buttons
-    navContainer.style.marginTop = "20px"; // Add some margin for spacing
+    navContainer.style.display = "flex";
+    navContainer.style.justifyContent = "space-between";
+    navContainer.style.marginTop = "20px";
 
-    // Previous Button
     const prevButton = document.createElement("button");
     prevButton.className = "whiteBtn";
     prevButton.innerText = "Previous";
@@ -283,10 +226,9 @@ function reviewAnswers() {
             reviewAnswers();
         }
     };
-    prevButton.disabled = reviewIndex === 0; // Disable if at the first question
+    prevButton.disabled = reviewIndex === 0;
     navContainer.appendChild(prevButton);
 
-    // Next Button
     const nextButton = document.createElement("button");
     nextButton.className = "whiteBtn";
     nextButton.innerText = "Next";
@@ -296,14 +238,13 @@ function reviewAnswers() {
             reviewAnswers();
         }
     };
-    nextButton.disabled = reviewIndex === quizQuestions2024.length - 1; // Disable if at the last question
+    nextButton.disabled = reviewIndex === quizQuestions2024.length - 1;
     navContainer.appendChild(nextButton);
 
-    optionsContainer.appendChild(navContainer); // Append the navigation buttons
+    optionsContainer.appendChild(navContainer);
 
-    // Add Result button below the navigation
     const resultButtonContainer = document.createElement("div");
-    resultButtonContainer.style.textAlign = "center"; // Center the button
+    resultButtonContainer.style.textAlign = "center";
     const resultButton = document.createElement("button");
     resultButton.className = "whiteBtn btnDark";
     resultButton.innerText = "Result";
@@ -312,8 +253,7 @@ function reviewAnswers() {
         document.getElementById("screen4").classList.add("hidden");
     };
     resultButtonContainer.appendChild(resultButton);
-    optionsContainer.appendChild(resultButtonContainer); // Append the Results button below
-
+    optionsContainer.appendChild(resultButtonContainer);
 
     document.getElementById("questionText").innerHTML = "";
     document.getElementById("questionCounter").innerHTML = "";
@@ -323,6 +263,10 @@ function reviewAnswers() {
     document.getElementById("screen4").classList.remove("hidden");
 }
 
+/**
+ * Shuffles an array in place.
+ * @param {Array} array - The array to shuffle.
+ */
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -330,73 +274,69 @@ function shuffleArray(array) {
     }
 }
 
-    function restartQuiz() {
-        // Hide the result screen and reset the input field
-        document.getElementById("resultScreen").classList.add("hidden");
-        document.getElementById("name").value = '';
+/**
+ * Restarts the quiz by resetting variables and the screen.
+ */
+function restartQuiz() {
+    document.getElementById("resultScreen").classList.add("hidden");
+    document.getElementById("name").value = '';
 
-        // Show the starting screen again
-        document.getElementById("screen3").classList.remove("hidden");
+    document.getElementById("screen3").classList.remove("hidden");
 
-        // Clear any existing timer intervals
-        clearInterval(timerInterval);
+    clearInterval(timerInterval);
 
-        // Reset time to initial value (10 minutes in seconds)
-        timeRemaining = 600;
-        document.getElementById("timerDisplay").innerText = `Start Timer: 10:00`; // Reset timer display
+    timeRemaining = 600;
+    document.getElementById("timerDisplay").innerText = `Start Timer: 10:00`;
 
-        // For example: resetting question index, score, etc.
-        currentQuestionIndex = 0;
-        score = 0;
-        selectedAnswers = [];
-    }
+    currentQuestionIndex = 0;
+    score = 0;
+    selectedAnswers = [];
+}
 
-    
-    function startTimer() {
-        timerInterval = setInterval(function () {
-            timeRemaining--;
-            const minutes = Math.floor(timeRemaining / 60);
-            const seconds = timeRemaining % 60;
-            document.getElementById("timerDisplay").innerText = `Start Timer: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+/**
+ * Starts a countdown timer for the quiz.
+ */
+function startTimer() {
+    timerInterval = setInterval(function () {
+        timeRemaining--;
+        const minutes = Math.floor(timeRemaining / 60);
+        const seconds = timeRemaining % 60;
+        document.getElementById("timerDisplay").innerText = `Start Timer: ${minutes}: ${seconds < 10 ? '0' + seconds : seconds}`;
 
-            // If time runs out, show results
-            if (timeRemaining <= 0) {
-                clearInterval(timerInterval);
-                showResults();
-            }
-        }, 1000); // Run every second
+        if (timeRemaining <= 0) {
+            clearInterval(timerInterval);
+            showResults();
         }
+    }, 1000);
+}
 
-        function eliminateOptions() {
-            const questionData = quizQuestions2024[currentQuestionIndex]; // Get the current question
-            const correctAnswer = questionData.correctAnswer; // Get the correct answer
-            const allOptions = questionData.options; // Get all options
-        
-            // Filter the wrong answers
-            const wrongAnswers = allOptions.filter(option => option !== correctAnswer);
-        
-            // Randomly select one wrong answer to keep
-            const selectedWrongAnswer = wrongAnswers[Math.floor(Math.random() * wrongAnswers.length)];
-        
-            // Create a new array with one correct answer and one wrong answer
-            const remainingOptions = [correctAnswer, selectedWrongAnswer];
-        
-            // Clear the current options displayed
-            const optionsContainer = document.getElementById("optionsContainer");
-            optionsContainer.innerHTML = ''; // Clear previous options
-        
-            // Display only the remaining options (one correct, one wrong)
-            remainingOptions.forEach(option => {
-                const optionElement = document.createElement("button");
-            optionElement.className = "optionQ";
-            optionElement.innerText = option;
-                optionElement.onclick = () => selectOption(option);
-            optionsContainer.appendChild(optionElement);
-            });
-        
-            // Disable the "Eliminate 50%" button after it's used once
-            const helpButton = document.querySelector(".helpBtn");
-            helpButton.disabled = true; // Disable the button
-            helpButton.style.opacity = 0.6; // Optionally, reduce opacity to visually indicate it's disabled
-            helpButton.innerText = "50% Help Used"; // Change text to show it's used
-        }
+/**
+ * Removes two incorrect options as a hint for the current question.
+ */
+function eliminateOptions() {
+    const questionData = quizQuestions2024[currentQuestionIndex];
+    const correctAnswer = questionData.correctAnswer;
+    const allOptions = questionData.options;
+
+    const wrongAnswers = allOptions.filter(option => option !== correctAnswer);
+
+    const selectedWrongAnswer = wrongAnswers[Math.floor(Math.random() * wrongAnswers.length)];
+
+    const remainingOptions = [correctAnswer, selectedWrongAnswer];
+
+    const optionsContainer = document.getElementById("optionsContainer");
+    optionsContainer.innerHTML = '';
+
+    remainingOptions.forEach(option => {
+        const optionElement = document.createElement("button");
+        optionElement.className = "optionQ";
+        optionElement.innerText = option;
+        optionElement.onclick = () => selectOption(option);
+        optionsContainer.appendChild(optionElement);
+    });
+
+    const helpButton = document.querySelector(".helpBtn");
+    helpButton.disabled = true;
+    helpButton.style.opacity = 0.6;
+    helpButton.innerText = "50% Help Used";
+}
