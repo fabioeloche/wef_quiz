@@ -21,6 +21,7 @@ The **World Economic Forum Quiz Web App** is an interactive platform designed to
    - [Validator Testing](#validator-testing)
 6. [Deployment](#deployment)
    - [Local Setup](#local-setup)
+   - [Clonning](#cloning-the-repository)
 7. [Future Enhancements](#future-enhancements)
 8. [Credits](#credits)
 
@@ -140,6 +141,18 @@ The website is deployed using GitHub Pages. Follow these steps to deploy the pro
 4. Under the **Code and Automation** section, select the **Pages** option.
 5. From the source dropdown, select the **main branch** and save the settings.
 6. The site will be deployed within a few minutes. The live version will be accessible at the provided URL once the deployment is complete.
+
+### Cloning the Repository
+
+To clone the repository to your local machine:
+
+1. Log in (or sign up) to GitHub.
+2. Go to the repository: [fabioeloche/wef_quiz](https://github.com/fabioeloche/wef_quiz).
+3. Click on the **Code** button, select the cloning method (HTTPS, SSH, or GitHub CLI), and copy the link provided.
+4. Open your terminal and navigate to the directory where you want to clone the repository.
+5. Type the following command into the terminal:
+   ```bash
+   git clone <https://github.com/fabioeloche/wef_quiz>
 
 ## Credits
 
