@@ -22,8 +22,9 @@ The **World Economic Forum Quiz Web App** is an interactive platform designed to
 6. [Deployment](#deployment)
    - [Local Setup](#local-setup)
    - [Cloning the Repository](#cloning-the-repository)
-7. [Future Enhancements](#future-enhancements)
-8. [Credits](#credits)
+7. [Testing](#testing)
+8. [Future Enhancements](#future-enhancements)
+9. [Credits](#credits)
 
 
 ## Project Overview
@@ -153,6 +154,26 @@ To clone the repository to your local machine:
 5. Type the following command into the terminal:
    ```bash
    git clone <https://github.com/fabioeloche/wef_quiz>
+
+## Testing   
+
+The table below outlines each feature tested, the expected outcomes, specific testing actions taken, and the results.
+
+| Feature                | Expected Outcome                                                     | Testing Performed            | Result                      | Pass/Fail |
+|------------------------|----------------------------------------------------------------------|-------------------------------|-----------------------------|-----------|
+| Site Title             | Link directs the user back to the home page                          | Clicked title                 | Home page reloads           | Pass      |
+| Name Input             | Requires user to enter their name before starting the quiz           | Entered name and clicked "Submit" button | Quiz starts only after name is entered | Pass      |
+| Start Button           | Starts the quiz and displays the first question                      | Clicked "Start Quiz"          | First question appears      | Pass      |
+| Question Display       | Shows the question with four answer options                          | Viewed question layout        | All options displayed       | Pass      |
+| Answer Selection       | Highlights selected answer and registers choice                      | Clicked answer option         | Answer is highlighted       | Pass      |
+| Next Button            | Moves to the next question                                           | Clicked "Next"                | Next question appears       | Pass      |
+| Timer                  | Counts down from 10 minutes in total for the entire quiz             | Observed timer at start       | Timer starts at 10 minutes  | Pass      |
+| Help Button (50% Rule) | Removes two incorrect answers from options                           | Clicked "Help"                | Two options removed         | Pass      |
+| Score Calculation      | Updates score for correct answers only                               | Completed quiz                | Score updates correctly     | Pass      |
+| Final Score Display    | Shows final score and review option at end of quiz                   | Finished quiz                 | Final score displayed       | Pass      |
+| Restart Button         | Resets quiz to first question, score, and 10-minute timer            | Clicked "Restart"             | Quiz restarts, timer resets | Pass      |
+| Responsiveness         | Adapts layout across desktop, tablet, and mobile                     | Resized window                | Layout adapts correctly     | Pass      |
+| Browser Compatibility  | Works on Chrome, Safari, Firefox, and Edge                           | Tested in all browsers        | Full functionality          | Pass      |
 
 ## Credits
 
