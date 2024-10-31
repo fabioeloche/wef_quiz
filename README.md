@@ -21,7 +21,7 @@ The **World Economic Forum Quiz Web App** is an interactive platform designed to
    - [Validator Testing](#validator-testing)
 6. [Deployment](#deployment)
    - [Local Setup](#local-setup)
-   - [Clonning](#cloning-the-repository)
+   - [Cloning the Repository](#cloning-the-repository)
 7. [Future Enhancements](#future-enhancements)
 8. [Credits](#credits)
 
