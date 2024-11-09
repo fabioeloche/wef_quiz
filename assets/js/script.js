@@ -44,7 +44,6 @@ let currentQuestionIndex = 0;
 let userName = '';
 let score = 0;
 let selectedAnswers = [];
-let quizDuration = 1 * 60; // 10 minutes in seconds
 let timerInterval;
 let timeRemaining = 600; // 10 minutes in seconds
 
