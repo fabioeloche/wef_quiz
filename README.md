@@ -129,6 +129,8 @@ The layout is centered and fully responsive, ensuring that the app works well on
 - **Lighthouse Testing**: Used Google Chrome's Lighthouse to verify performance and accessibility.
    - Result for index.html
 ![Lighthouse Testing](assets/images/lighthouseresult.png)
+- **JSHint Testing**: Used JSHint to ensure code quality and detect potential issues.
+   - Result for script.js: Passed with 5 warnings for unused variables, which are used in `index.html`. Overall, the test was successful.
 
 ## Deployment
 
