@@ -163,3 +163,26 @@ input[type="text"] {
 	width: 100%;
 	max-width: 320px;
 }
+@media (max-width: 600px) {
+    #content {
+        width: 90%; /* Increase responsiveness on mobile */
+        padding: 15px 20px; /* Reduce padding for a better fit */
+    }
+
+    input[type="text"] {
+        margin: 0; /* Remove unnecessary margin */
+        width: 80%; /* Ensure it fits within the parent container */
+        max-width: 80%; /* Override max-width to adapt to smaller screens */
+    }
+
+    .whiteBtn {
+        padding: 10px 15px; /* Adjust padding */
+        margin: 5px 0; /* Reduce margin */
+        width: 100%; /* Ensure button takes full width */
+        max-width: 100%; /* Override max-width */
+    }
+
+    .screen {
+        padding: 10px; /* Reduce padding for better fit */
+    }
+}
